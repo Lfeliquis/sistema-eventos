@@ -24,21 +24,34 @@
       </div>
     </header>
 
-    <section id="eventos">
-      <h2>Eventos Disponíveis</h2>
-      <div class="event-list">
-        <!-- Lista de eventos dinâmica (pode ser populada com JavaScript ou backend) -->
-      </div>
-      <button class="btn">Inscrever-se</button>
-    </section>
+    <main>
+      <!-- Container para as caixas -->
+      <div class="caixa-container">
+        <!-- Caixa de Eventos Disponíveis -->
+        <div class="caixa">
+          <h2>Eventos Disponíveis</h2>
+          <div
+            id="event-list"
+            class="event-list"
+          >
+            <!-- Lista de eventos dinâmica (pode ser populada com JavaScript ou backend) -->
+          </div>
+          <button class="btn">Ver Mais Eventos</button>
+        </div>
 
-    <section id="certificados">
-      <h2>Meus Certificados</h2>
-      <div class="certificate-list">
-        <!-- Lista de certificados dinâmica -->
+        <!-- Caixa de Emissão de Certificados -->
+        <div class="caixa">
+          <h2>Meus Certificados</h2>
+          <div
+            id="certificate-list"
+            class="certificate-list"
+          >
+            <!-- Lista de certificados dinâmica -->
+          </div>
+          <button class="btn">Ver Todos os Certificados</button>
+        </div>
       </div>
-      <button class="btn">Baixar Certificado</button>
-    </section>
+    </main>
 
     <script src="../js/script.js"></script>
   </body>

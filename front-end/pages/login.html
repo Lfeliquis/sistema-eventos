@@ -1,70 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>SGEA: Login</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/style.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="form-box login">
-            <form action="">
-                <h1>Login</h1>
-                <div class="input-box">
-                    <input type="text" placeholder="Username" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" placeholder="Password" required>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-                <div class="forgot-link">
-                    <a href="">Esqueceu sua senha?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-            </form>
+      <div class="form-box login">
+        <form action="">
+          <h1>Login</h1>
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="Username"
+              required
+            />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <div class="forgot-link">
+            <a href="">Esqueceu sua senha?</a>
+          </div>
+          <button
+            type="submit"
+            class="btn"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <form action="">
+          <h1>Cadastre-se</h1>
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="Username"
+              required
+            />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <i class="bx bxs-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button
+            type="submit"
+            class="btn"
+          >
+            Cadastrar
+          </button>
+        </form>
+      </div>
+
+      <div class="toggle-box">
+        <div class="toggle-panel toggle-left">
+          <h1>Seja bem vindo!</h1>
+          <p>Nao possui uma conta?</p>
+          <button class="btn register-btn">Cadastre-se</button>
         </div>
 
-        <div class="form-box register">
-            <form action="">
-                <h1>Cadastre-se</h1>
-                <div class="input-box">
-                    <input type="text" placeholder="Username" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-box">
-                    <input type="email" placeholder="Email" required>
-                    <i class='bx bxs-envelope' ></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" placeholder="Password" required>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-                <button type="submit" class="btn">Cadastrar</button>
-            </form>
+        <div class="toggle-panel toggle-right">
+          <h1>Bem-vindo de volta!</h1>
+          <p>Ja possui uma conta?</p>
+          <button class="btn login-btn">Faca o login</button>
         </div>
-
-        <div class="toggle-box">
-            <div class="toggle-panel toggle-left">
-                <h1>Seja bem vindo!</h1>
-                <p>Nao possui uma conta?</p>
-                <button class="btn register-btn">Cadastre-se</button>
-            </div>
-
-            <div class="toggle-panel toggle-right">
-                <h1>Bem-vindo de volta!</h1>
-                <p>Ja possui uma conta?</p>
-                <button class="btn login-btn">Faca o login</button>
-            </div>
-        </div>
+      </div>
     </div>
 
     <script src="../js/script.js"></script>
-</body>
-
+  </body>
 </html>

@@ -31,7 +31,7 @@ if (document.querySelector(".aluno-section")) {
 
   // Função para carregar eventos na página
   function carregarEventos() {
-    const eventList = document.querySelector(".event-list");
+    const eventList = document.getElementById("event-list");
     eventList.innerHTML = ""; // Limpa a lista antes de carregar
     eventos.forEach((evento) => {
       const eventItem = document.createElement("div");
@@ -54,7 +54,7 @@ if (document.querySelector(".aluno-section")) {
 
   // Função para carregar certificados na página
   function carregarCertificados() {
-    const certificateList = document.querySelector(".certificate-list");
+    const certificateList = document.getElementById("certificate-list");
     certificateList.innerHTML = ""; // Limpa a lista antes de carregar
     certificados.forEach((certificado) => {
       const certificateItem = document.createElement("div");
@@ -98,7 +98,7 @@ if (document.querySelector(".aluno-section")) {
 // Funções da Página do Coordenador
 if (document.querySelector(".coordenador-section")) {
   // Função para cadastrar evento
-  const eventForm = document.querySelector("#event-form");
+  const eventForm = document.getElementById("event-form");
   if (eventForm) {
     eventForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -140,7 +140,7 @@ if (document.querySelector(".coordenador-section")) {
 // Funções da Página do Diretor
 if (document.querySelector(".diretor-section")) {
   // Função para cadastrar coordenador
-  const coordenadorForm = document.querySelector("#coordenador-form");
+  const coordenadorForm = document.getElementById("coordenador-form");
   if (coordenadorForm) {
     coordenadorForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -171,7 +171,7 @@ if (document.querySelector(".diretor-section")) {
 
   // Função para carregar coordenadores na página
   function carregarCoordenadores() {
-    const coordenadorList = document.querySelector(".coordenador-list");
+    const coordenadorList = document.getElementById("coordenador-list");
     coordenadorList.innerHTML = ""; // Limpa a lista antes de carregar
     coordenadores.forEach((coordenador) => {
       const coordenadorItem = document.createElement("div");
@@ -199,3 +199,50 @@ if (document.querySelector(".diretor-section")) {
     carregarCoordenadores();
   };
 }
+
+// Funções para abrir e fechar modais
+function abrirModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = "flex";
+  }
+}
+
+function fecharModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Fechar modais ao clicar no botão de fechar
+document.querySelectorAll(".fechar-modal").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modal = btn.closest(".modal");
+    if (modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+// Fechar modais ao clicar fora do conteúdo
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+// Adicionar eventos aos botões que abrem modais
+document.querySelectorAll(".btn-editar").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    abrirModal("modal-editar");
+  });
+});
+
+document.querySelectorAll(".btn-presenca").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    abrirModal("modal-presenca");
+  });
+});
